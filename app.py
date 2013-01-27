@@ -3,13 +3,7 @@ from flask import Flask
 from flask import render_template
 import jinja2
 
-app = Flask(__name__, static_folder="public", static_url_path="")
-jinja_loader = jinja2.ChoiceLoader([
-    app.jinja_loader,
-    jinja2.FileSystemLoader(os.path.dirname(os.path.abspath(__file__)) + 
-    '/public'),
-])
-app.jinja_loader = jinja_loader
+app = Flask(__name__)
 
 @app.route("/")
 def index():
