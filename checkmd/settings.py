@@ -1,3 +1,5 @@
+from utilities import project_path
+
 # Django settings for checkmd project.
 
 DEBUG = True
@@ -19,6 +21,29 @@ DATABASES = {
         'PORT': '5432',                      
     }
 }
+
+# Requires
+REQUIRE_BASE_URL = "backbone"
+REQUIRE_JS = "components/requirejs/require.js"
+REQUIRE_DEBUG = DEBUG
+REQUIRE_ENVIRONMENT = "node"
+
+# PIPELINE
+PIPELINE_JS_COMPRESSOR = False
+PIPELINE_CSS_COMPRESSOR = False
+
+PIPELINE_JS = {
+    'checkmd': {
+        'source_filenames': (
+            'backbone/*.coffee',
+        ),
+        'output_filename': 'js/checkmd.js'
+    }
+}
+PIPELINE_COMPILERS = (
+    'pipeline.compilers.coffee.CoffeeScriptCompiler',
+)
+PIPELINE_COFFEE_SCRIPT_BINARY = '/usr/local/bin/coffee'
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
@@ -81,6 +106,8 @@ STATICFILES_FINDERS = (
 #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
+STATICFILES_STORAGE = 'pipeline.storage.PipelineStorage'
+
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = 'b6747$4r9_!#ih2jk)g9#mon&r39d3km&@bbt7x+k7$#ut^w&4'
 
@@ -110,6 +137,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    project_path('templates/'),
 )
 
 INSTALLED_APPS = (
@@ -121,6 +149,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'checkmd.checkmd',
     'south',
+    'require',
+    'pipeline',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:

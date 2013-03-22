@@ -1,0 +1,9 @@
+{
+  "name": "backbone-tastypie",
+  "version": "0.0.0",
+  "commit": "bdac458a24d6031d2f1e65f0ebd850e80a3c6ffe",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/PaulUithol/backbone-tastypie.git"
+  }
+}

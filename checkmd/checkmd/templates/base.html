@@ -1,0 +1,16 @@
+<html>
+
+{% load require %}
+{% load compressed %}
+
+<head>
+    <script src="https://cdn.firebase.com/v0/firebase.js"></script>
+    {% require_module "main" %}
+    <!-- {% compressed_js "checkmd" %} -->
+</head>
+
+<body>
+{% block content %}
+{% endblock content %}
+</body>
+</html>

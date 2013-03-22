@@ -3,3 +3,9 @@ psycopg2
 dj-database-url
 
 South
+
+django-tastypie
+
+django-pipeline
+
+django-require

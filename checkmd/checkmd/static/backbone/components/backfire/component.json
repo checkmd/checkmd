@@ -1,0 +1,9 @@
+{
+  "name": "backfire",
+  "version": "0.0.0",
+  "commit": "79b355be169572ef3ad7ead0c41e68c65a1e1f13",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/firebase/backfire.git"
+  }
+}
