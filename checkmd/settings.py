@@ -36,6 +36,7 @@ PIPELINE_JS = {
     'checkmd': {
         'source_filenames': (
             'backbone/*.coffee',
+            'backbone/*/**.coffee',
         ),
         'output_filename': 'js/checkmd.js'
     }

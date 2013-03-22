@@ -7,6 +7,7 @@ require.config
     backbone_tastypie: 'components/backbone-tastypie/backbone-tastypie'
     backfire: 'components/backfire/backbone-firebase'
     text: 'components/text/text'
+    handlebars: 'components/handlebars/handlebars'
 
   shim:
     backfire:
@@ -17,6 +18,8 @@ require.config
       exports: 'Backbone'
     underscore:
       exports: '_'
+    handlebars:
+      exports: "Handlebars"
 
 require ['app', 'backbone'], (App, Backbone) ->
   App.initialize()

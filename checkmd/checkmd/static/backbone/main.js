@@ -8,7 +8,8 @@
       backbone: 'components/backbone/backbone',
       backbone_tastypie: 'components/backbone-tastypie/backbone-tastypie',
       backfire: 'components/backfire/backbone-firebase',
-      text: 'components/text/text'
+      text: 'components/text/text',
+      handlebars: 'components/handlebars/handlebars'
     },
     shim: {
       backfire: {
@@ -21,6 +22,9 @@
       },
       underscore: {
         exports: '_'
+      },
+      handlebars: {
+        exports: "Handlebars"
       }
     }
   });

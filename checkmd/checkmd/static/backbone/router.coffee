@@ -1,8 +1,9 @@
 define [
-  'jquery',
-  'underscore',
-  'backbone',
-], ($, _, Backbone) ->
+  'jquery'
+  'underscore'
+  'backbone'
+  'views/index'
+], ($, _, Backbone, IndexView) ->
   AppRouter = Backbone.Router.extend
     routes:
       '': 'index'
@@ -12,6 +13,11 @@ define [
         pushState: true
         root: '/v1/'
         silent: false
+
+    index: ->
+      debugger
+      indexView = new IndexView()
+      indexView.render()
 
   initialize = (opts) ->
     app_router = new AppRouter()
