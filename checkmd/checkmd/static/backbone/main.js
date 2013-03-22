@@ -20,6 +20,10 @@
         deps: ['underscore', 'jquery'],
         exports: 'Backbone'
       },
+      backbone_tastypie: {
+        deps: ['backbone'],
+        exports: 'Backbone'
+      },
       underscore: {
         exports: '_'
       },
@@ -29,7 +33,7 @@
     }
   });
 
-  require(['app', 'backbone'], function(App, Backbone) {
+  require(['app', 'backbone_tastypie'], function(App, Backbone) {
     App.initialize();
     return $(document).on("click", "a:not([data-bypass])", function(e) {
       var href, root;

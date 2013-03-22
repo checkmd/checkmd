@@ -16,12 +16,15 @@ require.config
     backbone:
       deps: ['underscore', 'jquery']
       exports: 'Backbone'
+    backbone_tastypie:
+      deps: ['backbone']
+      exports: 'Backbone'
     underscore:
       exports: '_'
     handlebars:
       exports: "Handlebars"
 
-require ['app', 'backbone'], (App, Backbone) ->
+require ['app', 'backbone_tastypie'], (App, Backbone) ->
   App.initialize()
 
   # Backbone.emulateHTTP = true

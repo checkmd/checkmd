@@ -15,7 +15,6 @@
         });
       },
       index: function() {
-        debugger;
         var indexView;
 
         indexView = new IndexView();

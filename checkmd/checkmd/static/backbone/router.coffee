@@ -15,7 +15,6 @@ define [
         silent: false
 
     index: ->
-      debugger
       indexView = new IndexView()
       indexView.render()
 
