@@ -4,21 +4,20 @@ define [
   'backbone'
   'text!templates/index.html'
   'text!templates/checklist.html'
-  'models/checklist'
-], ($, Handlebars, Backbone, indexTemplate, checklistTemplate, Checklist) ->
+  'collections/checklists'
+], ($, Handlebars, Backbone, indexTemplate, checklistTemplate, ChecklistCollection) ->
   IndexView = Backbone.View.extend
     el: $("#index-container")
 
     initialize: ->
       @template = Handlebars.compile indexTemplate
       @checklistTemplate = Handlebars.compile checklistTemplate
-      @checklist = new Checklist({_id: 4})
-      @checklist.fetch
-        success: => @addChecklist()
+      @checklistCollection = new ChecklistCollection()
+      @checklistCollection.fetch
+        success: => @addChecklists()
 
     render: ->
       @$el.html @template
 
-    addChecklist: ->
-
-      @$('nav').append @checklistTemplate @checklist.forTemplate()
+    addChecklists: ->
+      @$('ul').append @checklistCollection.render()

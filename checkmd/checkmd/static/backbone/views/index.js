@@ -23,7 +23,7 @@
         return this.$el.html(this.template);
       },
       addChecklist: function() {
-        return this.$('nav').append(this.checklistTemplate(this.checklist.forTemplate()));
+        return this.$('ul').append(this.checklistTemplate(this.checklist.forTemplate()));
       }
     });
   });

@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 class Checklist(models.Model):
-    name = models.CharField(max_length=255)
+    name = models.CharField(max_length=255, null=False)
     # author = models.ForeignKey(User)
 
 class Step(models.Model):
