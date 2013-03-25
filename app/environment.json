@@ -1,0 +1,7 @@
+{
+    "CHECKMD_DATABASE_USER": "jnwng",
+    "CHECKMD_DATABASE_HOST": "localhost",
+    "CHECKMD_DATABASE_PORT": "5432",
+    "CHECKMD_DATABASE_NAME": "checkmd",
+    "CHECKMD_DATABASE_PASSWORD": ""
+}

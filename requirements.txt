@@ -4,7 +4,7 @@ dj-database-url
 
 South
 
-django-tastypie
+git+https://github.com/toastdriven/django-tastypie.git
 
 django-pipeline
 
