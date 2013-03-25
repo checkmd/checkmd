@@ -1,1 +1,1 @@
-coffeescript
+coffee-script
