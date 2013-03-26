@@ -1,4 +1,4 @@
-from settings.common import *
+from common import *
 
 PIPELINE_COFFEE_SCRIPT_BINARY = '/app/node_modules/.bin/coffee'
 
