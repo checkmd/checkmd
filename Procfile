@@ -1,1 +1,1 @@
-web: source bin/activate && python manage.py runserver 0.0.0.0:$PORT --noreload
+web: source bin/python manage.py runserver 0.0.0.0:$PORT --noreload
