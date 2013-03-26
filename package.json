@@ -1,0 +1,6 @@
+{
+    "name": "checkmd",
+    "dependencies": {
+        "coffee-script": ">=1.6.2"
+    }
+}
