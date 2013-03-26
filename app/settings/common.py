@@ -2,9 +2,14 @@ import json
 import sys
 import os
 
-from utilities import project_path
+def project_path(*args):
+    path = os.path.join(os.path.dirname(__file__), ".")
+    file_path = os.path.realpath(path)
+    return os.path.join(file_path, *args)
 
 # Django settings for checkmd project.
+
+sys.path.insert(0, (os.path.dirname(os.path.dirname(__file__))))
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
